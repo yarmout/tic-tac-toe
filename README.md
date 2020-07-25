@@ -8,4 +8,4 @@ For example, if you wanted to play the tile on the bottom left, you would press 
 ![Image of tic-tac-toe](https://i.imgur.com/L8SCdGL.png)
 
 
-image source: https://commons.wikimedia.org/wiki/File:Numpad.svg
+Numpad image source: https://commons.wikimedia.org/wiki/File:Numpad.svg
