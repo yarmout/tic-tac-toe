@@ -180,7 +180,7 @@ drawBoard()
 while(gameOver == False):
     while(playerOneTurn == True):
         tileNumber = int(input('Player 1\'s turn: '))
-        if tileNumber not in chosenTiles['X'] and tileNumber not in chosenTiles['O'] and tileNumber > -1 and tileNumber < 10:
+        if tileNumber not in chosenTiles['X'] and tileNumber not in chosenTiles['O'] and tileNumber > 0 and tileNumber < 10:
             goToTile(tileNumber, 'X')
             chosenTiles['X'].append(tileNumber)
             turnCounter += 1
@@ -189,7 +189,7 @@ while(gameOver == False):
                 print('Game Over! Player 1 Wins!')
                 playerTwoTurn = False
                 gameOver = True
-        elif tileNumber < 0 or tileNumber > 9:
+        elif tileNumber < 1 or tileNumber > 9:
             print('Invalid input! Tile does not exist.')
         else:
             print('That tile has already been chosen!')
@@ -202,7 +202,7 @@ while(gameOver == False):
         
     while(playerTwoTurn == True):
         tileNumber = int(input('Player 2\'s turn: '))
-        if tileNumber not in chosenTiles['X'] and tileNumber not in chosenTiles['O'] and tileNumber > -1 and tileNumber < 10:
+        if tileNumber not in chosenTiles['X'] and tileNumber not in chosenTiles['O'] and tileNumber > 0 and tileNumber < 10:
             goToTile(tileNumber, 'O')
             chosenTiles['O'].append(tileNumber)
             turnCounter += 1
@@ -210,7 +210,7 @@ while(gameOver == False):
             if winCondition('O') == True:
                 print('Game Over! Player 2 Wins!')
                 gameOver = True
-        elif tileNumber < 0 or tileNumber > 9:
+        elif tileNumber < 1 or tileNumber > 9:
             print('Invalid input! Tile does not exist.')
         else:
             print('That tile has already been chosen!')
